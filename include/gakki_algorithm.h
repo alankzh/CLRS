@@ -1,4 +1,4 @@
-#ifndef GAKKI_ALGORITHM_H
+ï»¿#ifndef GAKKI_ALGORITHM_H
 #define GAKKI_ALGORITHM_H
 #include <iostream>
 #include <map>
@@ -12,28 +12,28 @@
      }\
     __attribute__((constructor)) void register_algorithm_##key();
 
-/**gccÖĞÓĞÒ»¸ö¹Ø¼ü×Ö__attribute__((constructor)) £¬Ê¹ÓÃ¸Ã¹Ø¼ü×ÖÉùÃ÷µÄº¯Êı¾Í¿ÉÒÔÔÚmainº¯ÊıÖ®Ç°Ö´ĞĞ¡£
-*__attribute__((constructor))ÓëÈ«¾Ö±äÁ¿Àà¹¹Ôìº¯ÊıµÄÖ´ĞĞË³ĞòµÄÎÊÌâ£¬\
-*Ò»°ãÈ«¾Ö±äÁ¿ÊÇÔÚ__attribute__(constructor)Ç°Íê³É³õÊ¼»¯µÄ£¬
-*µ«ÊÇÈç¹û__attribute__ÊÇÔÚmainº¯ÊıËùÔÚµÄÎÄ¼ş£¬¶øÈ«¾Ö±äÁ¿ÊÇÔÚÆäËûÎÄ¼ş¶¨ÒåµÄ£¬
-*ÄÇÃ´__attribute__(constructor)¾Í»áÔÚÈ«¾Ö±äÁ¿Àà¹¹Ôìº¯ÊıÇ°ÃæÖ´ĞĞ£¬
+/**gccä¸­æœ‰ä¸€ä¸ªå…³é”®å­—__attribute__((constructor)) ï¼Œä½¿ç”¨è¯¥å…³é”®å­—å£°æ˜çš„å‡½æ•°å°±å¯ä»¥åœ¨mainå‡½æ•°ä¹‹å‰æ‰§è¡Œã€‚
+*__attribute__((constructor))ä¸å…¨å±€å˜é‡ç±»æ„é€ å‡½æ•°çš„æ‰§è¡Œé¡ºåºçš„é—®é¢˜ï¼Œ\
+*ä¸€èˆ¬å…¨å±€å˜é‡æ˜¯åœ¨__attribute__(constructor)å‰å®Œæˆåˆå§‹åŒ–çš„ï¼Œ
+*ä½†æ˜¯å¦‚æœ__attribute__æ˜¯åœ¨mainå‡½æ•°æ‰€åœ¨çš„æ–‡ä»¶ï¼Œè€Œå…¨å±€å˜é‡æ˜¯åœ¨å…¶ä»–æ–‡ä»¶å®šä¹‰çš„ï¼Œ
+*é‚£ä¹ˆ__attribute__(constructor)å°±ä¼šåœ¨å…¨å±€å˜é‡ç±»æ„é€ å‡½æ•°å‰é¢æ‰§è¡Œï¼Œ
 *
-*²»¹ı£¬ÔÚÖ´ĞĞ__attribute__Ê±ÒÑ¾­¿´µ½ÁËÈ«¾Ö±äÁ¿µÄ¶¨Òå£¬
-*Ö»ÊÇÃ»ÓĞÖ´ĞĞÈ«¾Ö±äÁ¿µÄ¹¹Ôìº¯Êı£¨ÕâÀï£¬Èç¹ûÈ«¾Ö±äÁ¿²»ÊÇÀà£¬¶øÊÇÆÕÍ¨ÀàĞÍ£¬ÊÇÃ»ÓĞÎÊÌâµÄ£©
+*ä¸è¿‡ï¼Œåœ¨æ‰§è¡Œ__attribute__æ—¶å·²ç»çœ‹åˆ°äº†å…¨å±€å˜é‡çš„å®šä¹‰ï¼Œ
+*åªæ˜¯æ²¡æœ‰æ‰§è¡Œå…¨å±€å˜é‡çš„æ„é€ å‡½æ•°ï¼ˆè¿™é‡Œï¼Œå¦‚æœå…¨å±€å˜é‡ä¸æ˜¯ç±»ï¼Œè€Œæ˜¯æ™®é€šç±»å‹ï¼Œæ˜¯æ²¡æœ‰é—®é¢˜çš„ï¼‰
 */
 
 
 namespace gakki{
-//Ëã·¨Ê¾ÀıÈİÆ÷
+//ç®—æ³•ç¤ºä¾‹å®¹å™¨
 extern std::map<int,std::pair< std::string,std::function<void ()> > > algorithms;
 
-//×¢²áËã·¨Ê¾Àı£¬keyÎªµ÷ÓÃÖ¸Áî£¬descriptionÎªËã·¨Ãû,algorithmsExampleÎªËã·¨Ê¾Àı
+//æ³¨å†Œç®—æ³•ç¤ºä¾‹ï¼Œkeyä¸ºè°ƒç”¨æŒ‡ä»¤ï¼Œdescriptionä¸ºç®—æ³•å,algorithmsExampleä¸ºç®—æ³•ç¤ºä¾‹
 extern void registerAlgorithm(int key,std::string name,std::function<void ()> algorithmsExample);
 
-//Õ¹Ê¾È«²¿µÄËã·¨
+//å±•ç¤ºå…¨éƒ¨çš„ç®—æ³•
 extern void showAlgorithms();
 
-//µ÷ÓÃÖ¸¶¨Ö¸ÁîµÄËã·¨
+//è°ƒç”¨æŒ‡å®šæŒ‡ä»¤çš„ç®—æ³•
 extern void invokeAlgorithm(int key);
 
 }

@@ -1,20 +1,17 @@
 # depslib dependency file v1.0
-1529737601 source:e:\cppworkspace\clrs\main.cpp
-	<iostream>
+1530868901 source:e:\cppworkspace\clrs\main.cpp
 	"gakki_algorithm.h"
 	<string>
 
-1529735706 source:e:\cppworkspace\clrs\src\chapter2.cpp
-	"Chapter2.h"
+1529748333 source:e:\cppworkspace\clrs\src\chapter2.cpp
 
-1529737555 e:\cppworkspace\clrs\include\chapter2.h
+1529747485 e:\cppworkspace\clrs\include\chapter2.h
 	<iostream>
 	"gakki_algorithm.h"
 
-1529735955 source:e:\cppworkspace\clrs\src\gakki_algorithm.cpp
-	"gakki_algorithm.h"
+1529747851 source:e:\cppworkspace\clrs\src\gakki_algorithm.cpp
 
-1529737477 e:\cppworkspace\clrs\include\gakki_algorithm.h
+1529747864 e:\cppworkspace\clrs\include\gakki_algorithm.h
 	<iostream>
 	<map>
 	<iterator>

@@ -1,4 +1,4 @@
-#include "gakki_algorithm.h"
+ï»¿#include "gakki_algorithm.h"
 
 std::map<int,std::pair< std::string,std::function<void ()> > > gakki::algorithms;
 
@@ -10,7 +10,7 @@ void gakki::registerAlgorithm(int key,std::string name,std::function<void ()> al
     }
     else
     {
-        std::cout<<"×¢²áËã·¨"<<name<<"Ê§°Ü,µ÷ÓÃÖ¸Áî:"<<key<<"ÒÑ¾­±»×¢²á"<<std::endl;
+        std::cout<<"æ³¨å†Œç®—æ³•"<<name<<"å¤±è´¥,è°ƒç”¨æŒ‡ä»¤:"<<key<<"å·²ç»è¢«æ³¨å†Œ"<<std::endl;
     }
 }
 
@@ -27,6 +27,6 @@ void gakki::invokeAlgorithm(int key)
     if(algorithms.count(key)){
         algorithms[key].second();
     }else{
-        std::cout<<"µ÷ÓÃÖ¸Áî"<<key<<"Î´°ó¶¨º¯Êý"<<std::endl;
+        std::cout<<"è°ƒç”¨æŒ‡ä»¤"<<key<<"æœªç»‘å®šå‡½æ•°"<<std::endl;
     }
 }
